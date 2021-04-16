@@ -31,7 +31,11 @@ const addLaptopsToMenu = (laptops) => {
     nameElement.innerText = laptops[0].title;
     priceElement.innerText = laptops[0].price;
     imageElement.src = "https://noroff-komputer-store-api.herokuapp.com/" + laptops[0].image;
-    specsElement.innerText = laptops[0].specs;
+    laptops[0].specs.forEach(spec => {
+        const li = document.createElement('li');
+        li.innerText = spec;
+        specsElement.append(li);
+    })
     descriptionElement.innerText = laptops[0].description;
 }
 
@@ -47,7 +51,12 @@ const handleLaptopMenuChange = e => {
     priceElement.innerHTML = selectedLaptop.price;
     currentPrice = selectedLaptop.price;
     imageElement.src = "https://noroff-komputer-store-api.herokuapp.com/" + selectedLaptop.image;
-    specsElement.innerHTML = selectedLaptop.specs;
+    specsElement.innerHTML = "";
+    selectedLaptop.specs.forEach(spec => {
+        const li = document.createElement('li');
+        li.innerText = spec;
+        specsElement.append(li);
+    })
     descriptionElement.innerText = selectedLaptop.description;
     nameElement.innerText = selectedLaptop.title;
 }

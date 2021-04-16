@@ -13,7 +13,7 @@ footer{
 }
 h2, #price{
   font-size: 40px;
-padding: 20px;
+/* padding: 20px; */
 }
 span, p{
   font-size: 20px;
@@ -48,6 +48,11 @@ img {
   width: 250px;
   height: 250px;
 }
+li{
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
 button {
   display: inline-block;
   padding: 15px 25px;
@@ -77,3 +82,7 @@ button {
 .big-btn:hover {background-color: #3e8e41}
 .sml-btn:hover {background-color: rgb(60, 143, 143)}
 .sml-btn2:hover {background-color: rgb(60, 143, 143)}
+
+@media only screen and (max-width:  {
+  
+}
