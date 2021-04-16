@@ -1,0 +1,79 @@
+*{
+    margin: auto 30px;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+header{
+    background-color: darkgray;
+    height: 40px;
+}
+footer{
+  background-color: white;
+  height: 40px;
+}
+h2, #price{
+  font-size: 40px;
+padding: 20px;
+}
+span, p{
+  font-size: 20px;
+}
+#hiddenLoan {
+visibility: hidden;
+}
+#hiddenBtn {
+  visibility: hidden;
+  }
+main, section{
+display: flex;
+justify-content: space-evenly;
+text-align: center;
+}
+main div{
+    border: 1px solid;
+    width: 33%;
+    height: 25em;
+    margin: 20px auto;
+}
+section div{
+    width: 33%;
+    height: 25em;
+    padding: 50px 10px;
+    margin: 10px 0;
+}
+section{
+    border: 0.5px solid;
+    }
+img {
+  width: 250px;
+  height: 250px;
+}
+button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+    box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.sml-btn{
+  margin-top: 40px;
+    background-color: aqua;  
+}
+.sml-btn2{
+  margin-top: 10px;
+    background-color: rgb(228, 116, 108);  
+}
+.big-btn{
+  margin-top: 10px;
+    background-color: chartreuse;
+}
+.big-btn:hover {background-color: #3e8e41}
+.sml-btn:hover {background-color: rgb(60, 143, 143)}
+.sml-btn2:hover {background-color: rgb(60, 143, 143)}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Komputer Store</h1>
+    </header>
+    <main>
+        <div>
+            <h2>Joe Banker</h2>
+            <p>Balance <span id="bankBalance"> 0.0</span> kr</p><br>
+            <p id="hiddenLoan">Loan <span id="loanBalance"> </span> kr</p><br>
+            <button class="sml-btn2" id="hiddenBtn">Clear loan</button><br>
+            <button class="sml-btn2" id="loan">Get a loan</button>
+        </div>
+        <div>
+            <h2>Work</h2>
+            <p>Pay <span id="workBalance"> 0.0</span> kr</p><br><br><br><br><br><br>
+            <button class="sml-btn" id="sendPay">Bank</button>
+            <button class="sml-btn" id="workPay">Work</button>
+        </div>
+        <div>
+            <h2>Laptops</h2>
+            <select name="laptop" id="laptops"></select>
+            <p>Features:<ul id="specs"></ul></p>
+        </div>
+    </main>
+    <section>
+        <div><img id=image src="" alt="computer-image"></div>
+        <div>
+            <h2 id="name"></h2>
+            <p id="description"></p>
+        </div>
+        <div>
+            <h2><span id="price"> </span>Kr</h2><br><br><br>
+            <button class="big-btn" id="buy">BUY NOW</button>
+        </div>
+    </section>
+    <footer></footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
