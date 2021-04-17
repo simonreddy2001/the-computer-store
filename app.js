@@ -85,10 +85,10 @@ const sendPay = () => {
 const loanApply = () => {
     if(loanBalance === 0.0){
         const loanAmt = prompt("Enter the amount would you like to loan: ");
-        if (loanAmt > (bankBalance*2) && loanBalance !== 0.0){
+        if (parseInt(loanAmt) > parseInt(bankBalance*2) || loanAmt.trim()==0 || isNaN(loanAmt)) {
             alert("Unfortunately we can not grant the loan that you appled!!! ");
         }
-        else{
+        else {
             alert("Congratulations.. Loan granted!!");
             loanBalance = loanAmt;
             hiddenElement.style.visibility = "visible";
@@ -103,6 +103,12 @@ const loanApply = () => {
 const repayLoan =() => {
     loanBalance -= workBalance; 
     loanBalanceElement.innerHTML = loanBalance;
+    if(loanBalance < 0.0){
+        bankBalance = parseInt(bankBalance) + Math.abs(parseInt(loanBalance));
+        bankBalanceElement.innerHTML = bankBalance;
+        loanBalance = 0.0;
+        loanBalanceElement.innerHTML = 0.0;
+    }
     workBalance = 0.0;
     workBalanceElement.innerHTML = 0.0;
     resetLoan();
@@ -133,4 +139,3 @@ sendElement.addEventListener("click", sendPay);
 loanElement.addEventListener("click", loanApply);
 clearLoanElement.addEventListener("click", repayLoan);
 payButtonElement.addEventListener("click", buyLaptop);
-
