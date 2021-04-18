@@ -94,6 +94,8 @@ const loanApply = () => {
             hiddenElement.style.visibility = "visible";
             hiddenBtnElement.style.visibility = "visible";
             loanBalanceElement.innerHTML = loanBalance;
+            bankBalance = parseInt(bankBalance) + parseInt(loanBalance);
+            bankBalanceElement.innerHTML = bankBalance;
         }
     }
     else{
