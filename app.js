@@ -75,7 +75,14 @@ const sendPay = () => {
     else{
         bankBalance += (workBalance*0.9);
         bankBalanceElement.innerHTML = bankBalance;
-        loanBalanceElement.innerHTML -= (workBalance*0.1);
+        loanBalance -= (workBalance*0.1);
+        loanBalanceElement.innerHTML = loanBalance;
+        if(loanBalance < 0.0){
+            bankBalance = parseInt(bankBalance) + Math.abs(parseInt(loanBalance));
+            bankBalanceElement.innerHTML = bankBalance;
+            loanBalance = 0.0;
+            loanBalanceElement.innerHTML = 0.0;
+        }
     }
     workBalance = 0.0;
     workBalanceElement.innerHTML = 0.0;
@@ -103,7 +110,7 @@ const loanApply = () => {
     }
 }
 const repayLoan =() => {
-    loanBalance -= workBalance; 
+    loanBalance = parseInt(loanBalance) - parseInt(workBalance); 
     loanBalanceElement.innerHTML = loanBalance;
     if(loanBalance < 0.0){
         bankBalance = parseInt(bankBalance) + Math.abs(parseInt(loanBalance));
@@ -117,7 +124,7 @@ const repayLoan =() => {
 }
 
 const resetLoan =() => {
-    if(loanBalance === 0.0){
+    if(parseInt(loanBalance) === 0.0){
         hiddenElement.style.visibility = "hidden";
             hiddenBtnElement.style.visibility = "hidden";
     }
